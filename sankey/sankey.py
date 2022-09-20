@@ -20,7 +20,7 @@ def _code_mapping(df, src, targ):
     return df, labels
 
 
-def make_sankey(df, src, targ, vals=None, pad=100):
+def make_sankey(df, src, targ, vals=None, **kwargs):
     """Generate the sankey diagram """
 
     df, labels = _code_mapping(df, src, targ)
@@ -30,8 +30,14 @@ def make_sankey(df, src, targ, vals=None, pad=100):
     else:
         values = [1] * len(df)
 
+    pad = kwargs.get('pad', 50)
+    thickness = kwargs.get('thickness', 30)
+    line_color = kwargs.get('line_color', 'black')
+    line_width = kwargs.get('line_width', 1)
+
     link = {'source': df[src], 'target': df[targ], 'value': values}
-    node = {'label': labels, 'pad': pad, 'thickness': 30}
+    node = {'label': labels, 'pad': pad, 'thickness': thickness,
+            'line': {'color': line_color, 'width': line_width}}
 
     sk = go.Sankey(link=link, node=node)
     fig = go.Figure(sk)

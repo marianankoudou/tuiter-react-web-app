@@ -9,7 +9,7 @@ import sankey as sk
 
 def main():
     df = pd.read_csv('bio.csv')
-    sk.make_sankey(df, 'disease', 'gene')
+    sk.make_sankey(df, 'disease', 'gene', 'pubs', pad=10, thickness=100, line_width=5)
 
 
 main()
