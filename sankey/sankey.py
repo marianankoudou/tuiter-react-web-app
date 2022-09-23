@@ -6,7 +6,8 @@ def _code_mapping(df, src, targ):
     and converts them to integers 0,1,2,3... """
 
     # Extract distinct labels
-    labels = sorted(list(set(list(df[src]) + list(df[targ]))))
+    # labels = sorted(list(set(list(df[src]) + list(df[targ]))))
+    labels = list(set(list(df[src]) + list(df[targ])))
 
     # define integer codes
     codes = list(range(len(labels)))
