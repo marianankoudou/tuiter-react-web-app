@@ -39,7 +39,7 @@ def extract_local_network(gad, phenotype, min_pub=3):
 
 def main():
     # Read GAD data
-    gad = pd.read_csv("gad.csv")
+    gad = pd.read_csv("../data/gad.csv")
 
     # Analysis parameters
     phenotype = 'asthma'
