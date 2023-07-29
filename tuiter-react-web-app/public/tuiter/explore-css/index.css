@@ -1,0 +1,25 @@
+.rounded-corners-all-around {
+    border-radius: 50px;
+   }
+.rounded-corners-all-around {
+    width: 100%;
+    border-radius: 100px;
+}
+hr.new {
+    width: 10%;
+    border-top: 10px solid blue;
+  }
+.bottom-left{
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+.searchBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.wd-profile-img{
+    border-radius: 50%
+}
